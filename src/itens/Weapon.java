@@ -93,6 +93,7 @@ public class Weapon extends Item{
 
         retorno += this.getDescription() + " - " + this.getWeight() + "kg - ";
         retorno += this.damage + " damage \n";
+        retorno += this.durability + " durability\n";
 
         return retorno;
     }

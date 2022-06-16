@@ -30,7 +30,7 @@ import src.rooms.TransporterRoom;
  */
 public class Player extends Character {
 
-    private final static int INITIAL_MAXIMUM_WEIGHT = 3;
+    private final static int INITIAL_MAXIMUM_WEIGHT = 5;
     
     private List<Item> itens; //Itens do jogador
     private Room previousRoom; //Room passada do personagem

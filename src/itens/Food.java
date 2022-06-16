@@ -1,7 +1,7 @@
 package src.itens;
 public class Food extends Item{
     private double plusMaxWeight;
-    private int plusHealth;
+    private double plusHealth;
 
     public Food(String name, String description, double weight){
         super(name, description, weight);
@@ -9,7 +9,7 @@ public class Food extends Item{
         this.plusMaxWeight = 0;
     }
 
-    public Food(String name, String description, double weight, int plusHealth, double plusMaxWeight){
+    public Food(String name, String description, double weight, double plusHealth, double plusMaxWeight){
         super(name, description, weight);
         this.plusHealth = plusHealth;
         this.plusMaxWeight = plusMaxWeight;
@@ -23,11 +23,11 @@ public class Food extends Item{
         this.plusMaxWeight = plusMaxWeight;
     }
 
-    public int getPlusHealth() {
+    public double getPlusHealth() {
         return this.plusHealth;
     }
 
-    public void setPlusHealth(int plusHealth) {
+    public void setPlusHealth(double plusHealth) {
         this.plusHealth = plusHealth;
     }
 

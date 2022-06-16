@@ -121,20 +121,26 @@ public class Game
         saida = new ExitRoom("at the exit! You finished the game!");
 
         centauro.setExits("north", hering);
-        centauro.addItem("Football", "old Football", 0.9);
+        centauro.addItem("Vasco Shirt", "ugly as fuck vasco shirt", 0.7);
+        centauro.addItem(new Weapon("Football", "Old football", 0.3, 5, 15));
+        centauro.addItem(new Food("Protein Bar", "Protein bar, You eat and keep hungry", 0.2, 30, 0));
+        centauro.addItem(new Weapon("Boxing gloves", "A new pair of boxing gloves", 1.4, 25, 6));
 
 
         hering.setExits("west", tonsShop);
         hering.setExits("south", centauro);
         hering.setExits("north", mcDonalds);
         hering.addItem("Belt","rusty belt", 5);
+        hering.addItem(new Food("Meat", "a very bad meat", 2, 60, 2));
 
         tonsShop.setExits("east", hering);
         tonsShop.addItem( "Rock","tinniest rock ever", 0.5);
+        tonsShop.addItem(new Weapon("Theo Isaac", "little man Theo Isaac", 5, 12, 2));
 
         spoleto.setExits("west", mcDonalds);
         spoleto.setExits("east", elevadorPrimeiroAndar);
-        spoleto.addItem("Knife","really small knife", 0.01);
+        spoleto.addItem(new Weapon("Knife", "Sharpy Knife", 0.3, 17, 4));
+        spoleto.addItem(new Food("Spaghetti", "Spaghetti with that white sauce we all like", 0.6, 40, 2));
 
         elevadorPrimeiroAndar.setExits("west", spoleto);
 
@@ -145,24 +151,33 @@ public class Game
         mcDonalds.addItem("Sushi","tasty sushi", 0.2);
         mcDonalds.addItem("Table","one heck of a table", 4);
         mcDonalds.addItem( "Fork","beautiful fork", 0.01);
-        mcDonalds.addItem(new Food("Magic cookie", "Magic Cookie", 0.7, 20, 3.7));
+        mcDonalds.addItem(new Food("Magic cookie", "Magic Cookie", 0.7, 200, 3.7));
+        mcDonalds.addItem(new Food("Big Mac", "Best and worst mcdonalds burger, big mac", 0.4, -1.2, 4));
+        mcDonalds.addItem(new Weapon("French Fries", "deadly, deadly french fries,", 1.2, 4, 2));
 
         
         cafe.setExits("north", cinema);
         cafe.setExits("south", lojaDoFlamengo);
         cafe.setExits("east", mcDonalds);
-        cafe.addItem("Cup of coffee","huge cup of coffee", 2);
+        cafe.addItem("Napkins","A huge amount of napkins", 8);
+        cafe.addItem(new Food("Pao de Queijo", "A cheese bread, but it's different", 0.4, 60, 0.2));
 
         cinema.setExits("south", mcDonalds);
-        cinema.addItem("Popcorn","salty pop ass corn" ,3);
+        cinema.addItem(new Food("Popcorn", "Salty popcorn", 0.2, 30, 6));
+        cinema.addItem("Morbius", "Morbius - It's Morbin Time", 5);
+
 
         lojaDoFlamengo.setExits("north", cafe);
         lojaDoFlamengo.setExits("south", piticas);
         lojaDoFlamengo.setExits("west", escadaRolantePrimeiroAndar);
-        lojaDoFlamengo.addItem("Gabigol","best brazilian player ever", 78);
+        lojaDoFlamengo.addItem("Gabigol","Gabigol, the best brazilian player ever", 78);
+        lojaDoFlamengo.addItem(new Weapon("Rodinei", "Rodinei: he can make you laught", 20, 2, 30));
+
 
         piticas.setExits("north", lojaDoFlamengo);
         piticas.addItem("Piticas shirt","goofy ass nerd shirt", 0.6);
+        
+
 
         escadaRolantePrimeiroAndar.setExits("up", escadaRolanteSegundoAndar);
         escadaRolantePrimeiroAndar.setExits("east", lojaDoFlamengo);
@@ -172,16 +187,26 @@ public class Game
         
         gameStation.setExits("west", pracaDeAlimentacao);
         gameStation.setExits("south", banheiro);
+        gameStation.addItem("Game tickets", "A ticket that you can trade for an bow and arrow that doesn't last for 5 minutes", 0.5);
+        gameStation.addItem(new Weapon("Nerf", "a classy nerf", 1, 10, 5));
+        gameStation.addItem(new Weapon("Bumber car", "a huge bumper car", 4, 1, 100));
 
         banheiro.setExits("north", gameStation);
         banheiro.setExits("west", pracaDeAlimentacao);
+        banheiro.addItem("Turd", "A biiig piece of turd", 4);
+        banheiro.addItem(new Weapon("Toilet Paper", "you can clean and kill people with this toilet paper", 1, 14, 5));
+        banheiro.addItem(new Food("Apple", "a very clean apple", 3, 100, 2));
 
         leitura.setExits("northwest", pracaDeAlimentacao);
         leitura.setExits("west", escadaRolanteSegundoAndar);
         leitura.setExits("south", oticaWamberto);
+        leitura.addItem("A sutil arte de tacar o foda-se", "An underrated book, the sutil art of tacar o fds", 2);
+        leitura.addItem(new Food("Gum", "strawberry gum", 0.4, 50, 4));
         
         oticaWamberto.setExits("north", leitura);
         oticaWamberto.setExits("west", lojasAmericanas);
+        oticaWamberto.addItem("Glasses", "harry potter like glasses", 1);
+        oticaWamberto.addItem(new Food("Pear", "a pear in an unknown state", 1, 60, 3));
         
         escadaRolanteSegundoAndar.setExits("down", escadaRolantePrimeiroAndar);
         escadaRolanteSegundoAndar.setExits("west", pirlimpimpim);
@@ -190,6 +215,8 @@ public class Game
         
         lojasAmericanas.setExits("north", escadaRolanteSegundoAndar);
         lojasAmericanas.setExits("east", oticaWamberto);
+        lojasAmericanas.addItem(new Weapon("a bit of everything", "in a very diverse store, you find a very diverse item", 2, 50, 30));
+        lojasAmericanas.addItem(new Food("Chocolate bar", "an oddly good chocolate bar",0.5, 60, 10));
 
         pracaDeAlimentacao.setExits("northeast", gameStation);
         pracaDeAlimentacao.setExits("east", banheiro);
@@ -197,6 +224,8 @@ public class Game
         pracaDeAlimentacao.setExits("north", boliche);
         pracaDeAlimentacao.setExits("south", pirlimpimpim);
         pracaDeAlimentacao.setExits("southeast", escadaRolanteSegundoAndar);
+        pracaDeAlimentacao.addItem(new Food("Pizza", "a bad and old pizza piece", 0.9, 80, 0));
+        pracaDeAlimentacao.addItem(new Weapon("Machete", "huge machette ", 4, 22, 2));
 
         elevadorSegundoAndar.setExits("east", pracaDeAlimentacao);
         elevadorSegundoAndar.setExits("north", pracaDeAlimentacao);
@@ -208,6 +237,7 @@ public class Game
 
         lojaDoBelo.setExits("west", salaDeSeguranca);
         lojaDoBelo.setExits("north", pirlimpimpim);
+        lojaDoBelo.addItem("Belo shirt", "ugly ass belo jersey", 2);
 
         lojaDoBelo.addTeleportLocation(onildo);
         lojaDoBelo.addTeleportLocation(estacionamento);
@@ -231,10 +261,47 @@ public class Game
         estacionamento.setExits("east", elevadorEstacionamento);
         estacionamento.setExits("exit", saida);
 
+        Monster nebueR; 
+        nebueR = new Monster("nebueR", "the Russian guard", salaDeSeguranca, 125);
+        nebueR.addWeapon(new Weapon("Trancamento de Curso", "If you get it, you get it.", 5, 15, 3));
+        salaDeSeguranca.setMonster(nebueR);
+
+        Monster wamberto;
+        wamberto = new Monster("Wamberto", "the rageful owner of the eyeglasses store", oticaWamberto, 110);
+        wamberto.addWeapon(new Weapon("canudo", "wamberto can blow the straw, and make a huge impact",1, 20, 3));
+        oticaWamberto.setMonster(wamberto);
+
+        Monster gorgonzola_gengibre_guacamole;
+        gorgonzola_gengibre_guacamole = new Monster("Gorgonzola, Gengibre e Guacamole", "the dangerous food trinity", pracaDeAlimentacao, 150);
+        gorgonzola_gengibre_guacamole.addWeapon(new Weapon("fat", "those brutal monsters can make you overweight", 4, 10, 3));
+        pracaDeAlimentacao.setMonster(gorgonzola_gengibre_guacamole);
+        
+        Monster fred;
+        fred = new Monster("Professor fred", "an 'ordinary' calculus teacher", hering, 80);
+        fred.addWeapon(new Weapon("geogebra", "causes brain stun in his students", 5, 15, 2));
+        fred.addWeapon(new Weapon("canetinha", "'caiiu a canetinha'", 1, 5, 1));
+        hering.setMonster(fred);
+
+        Monster unifilis;
+        unifilis = new Monster("unifilis", "the greek philosopher... or the STD", banheiro, 100);
+        unifilis.addWeapon(new Weapon("paideia", "the greek education can be harmful", 2, 10, 2));
+        unifilis.addWeapon(new Weapon("HIV", "a really bad disease", 1, 35, 1));
+        banheiro.setMonster(unifilis);
+
+        Monster graben;
+        graben = new Monster("Graben", "a shapeless lovecraftian creature", mcDonalds, 60);
+        graben.addWeapon(new Weapon("Horst", "a dangerous seismic anomaly", 3, 10, 3));
+        mcDonalds.setMonster(graben);
+
+        Monster zeugmae;
+        zeugmae = new Monster("Zeugmae", "A mystical nerd Wizard", piticas, 30);
+        zeugmae.addWeapon(new Weapon("the staff of truth", "he literally throws the truth in your face, isn't that magical?", 3, 5, 3));
+        piticas.setMonster(zeugmae);
+       
         Monster dablo;
-        dablo = new Monster("Mr Dablo", "the miserable one", mcDonalds, this);
-        dablo.addWeapon(new Weapon("dablinho", "I really dont know", 2, 20, 3));
-        mcDonalds.setMonster(dablo);
+        dablo = new Monster("Mr Dablo", "the miserable one", estacionamento, 175);
+        dablo.addWeapon(new Weapon("dablozinhos", "Mr dablo can throw dablozinhos in your direction, it doest seem dangerous, but it really is!", 2, 40, 5));
+        estacionamento.setMonster(dablo);
 
         //mcDonalds.setExits("northeast", saida);
         //saida.setExits("southwest", mcDonalds);
@@ -242,9 +309,8 @@ public class Game
 
 
         //this.player.setCurrentRoom(pracaDeAlimentacao);  // iniciar game na praça de alimentação
-        this.player.addItem(new Weapon("Penis", "My penis", 2, 50, 4));
-        this.player.setCurrentRoom(mcDonalds);
-
+        this.player.addItem(new Weapon("Bad knife", "A not so sharp wife", 0.2, 2, 400));
+        this.player.setCurrentRoom(centauro);
     }
 
     private void createPlayer(String name){
@@ -263,14 +329,16 @@ public class Game
                 
         boolean finished = false;
         while (! finished) {
-            Command command;
-        
-            command = parser.getCommand();
-
+            System.out.println("\n");
             if (!this.player.isAlive()){
                 System.out.println("You're dead. Try again");
                 break;
             }
+
+            Command command;
+        
+            command = parser.getCommand();
+
 
             finished = processCommand(command);
             
@@ -321,6 +389,11 @@ public class Game
             this.help(command);
         }
         else if (commandWord == CommandWord.GO){
+
+            if (this.player.getCurrentRoom().hasMonster()){
+                System.out.println("||| You can't leave a room with a monster! |||");
+                return false;
+            }
 
             try{
                 sucess = this.player.goRoom(command);
@@ -514,6 +587,7 @@ public class Game
         }
 
         if (sucess){
+            System.out.println("---------------------");
             System.out.println(this.player.getFullInfo());
         }
 
@@ -590,7 +664,7 @@ public class Game
         System.out.println(parser.showCommandWords());
         */
         String Help = new String("You are lost. You are alone. You wander around at the Manaíra Shopping mall.\n" +
-                                        " Your command words are: " +
+                                        "Your command words are: \n" +
                                          parser.showCommandWords());
         return Help;
     }

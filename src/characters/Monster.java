@@ -5,7 +5,6 @@ import java.util.Objects;
 import java.util.Random;
 
 import src.game.Command;
-import src.game.Game;
 import src.itens.Weapon;
 import src.rooms.ExitRoom;
 import src.rooms.Room;
@@ -37,10 +36,11 @@ public class Monster extends Character{
      * @param monsterDescription descrição do monstro
      * @param currentRoom room atual do monstro
      */
-    public Monster(String name, String monsterDescription, Room currentRoom, Game game){
+    public Monster(String name, String monsterDescription, Room currentRoom, double health){
         super(name, currentRoom);
         this.description = monsterDescription;
         weapons = new ArrayList<Weapon>();
+        setHealth(health);
     }
 
     public void addWeapon(Weapon weapon){

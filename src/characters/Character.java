@@ -20,7 +20,7 @@ import src.rooms.Room;
 public abstract class Character {
     private Room currentRoom;
     private String name;
-    private int health;
+    private double health;
     private boolean alive;
 
     /**
@@ -101,14 +101,16 @@ public abstract class Character {
         return this.characterHealth() + this.getLocationInfo();
     }
 
-    public int getHealth(){
+    public double getHealth(){
         return this.health;
     }
 
-    public void setHealth(int health){
-        if (health >= 0){
-            this.health = health;
+    public void setHealth(double health){
+        if (health < 0){
+            this.health = 0;
+            return;
         }
+        this.health = health;      
     }
 
     public boolean isAlive(){
