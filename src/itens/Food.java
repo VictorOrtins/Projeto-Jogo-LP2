@@ -42,5 +42,16 @@ public class Food extends Item{
         return retorno;
     }
 
+    public String showItemRoom(){
+        String retorno = "";
+
+
+        retorno += this.getDescription() + " - " + this.getWeight() + "kg - ";
+        retorno += this.plusMaxWeight + " plusMaxWeight ";
+        retorno += this.plusHealth + " plusHealth\n";
+
+        return retorno;
+    }
+
 
 }

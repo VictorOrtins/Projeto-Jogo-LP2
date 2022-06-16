@@ -148,9 +148,9 @@ public class Game
         mcDonalds.setExits("east", spoleto);
         mcDonalds.setExits("south", hering);
         mcDonalds.setExits("north", cinema);
-        mcDonalds.addItem("Sushi","tasty sushi", 0.2);
+        mcDonalds.addItem(new Food("Sushi", "Tasty Sushi", 0.2, 2, 40));
         mcDonalds.addItem("Table","one heck of a table", 4);
-        mcDonalds.addItem( "Fork","beautiful fork", 0.01);
+        mcDonalds.addItem(new Weapon("Fork", "useful fork,", 0.8, 30, 10));
         mcDonalds.addItem(new Food("Magic cookie", "Magic Cookie", 0.7, 200, 3.7));
         mcDonalds.addItem(new Food("Big Mac", "Best and worst mcdonalds burger, big mac", 0.4, -1.2, 4));
         mcDonalds.addItem(new Weapon("French Fries", "deadly, deadly french fries,", 1.2, 4, 2));
