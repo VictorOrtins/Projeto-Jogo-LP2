@@ -110,6 +110,7 @@ public class Room
             return false;
         }
     }
+
     
     /**
      * 
@@ -175,6 +176,8 @@ public class Room
         String retorno = "You are " + description + " , " + this.name + ".\n";
         if (items != null){
             if (items.size() != 0){
+                retorno += "Room items: ";
+                /* 
                 retorno += "Look! there's a ";
                 for (int i = 0; i < items.size(); i++){
                     if (i != 0 && i != items.size() - 1){ //Se não for o primeiro e não for o último da lista
@@ -185,13 +188,17 @@ public class Room
                     }
                     retorno += items.get(i).getName();
                 }
+                */
                 retorno += "\n";
+                retorno += Item.returnAllItems(items);
+                /* 
                 for (int i = 0; i < items.size(); i++){
                     //String descricaoDoItem = items.get(i).getDescription();
-                    String numeroDoItem = "[" + i + "]";
+                    String nomeDoItem = "- ";
     
-                    retorno += numeroDoItem + items.get(i).showItemRoom();
+                    retorno += nomeDoItem + items.get(i).showItemRoom();
                 }
+                */
                 retorno += "\n";
             }
         }
@@ -199,12 +206,8 @@ public class Room
         if (hasMonster()){
             retorno += monster.getFullInfo();
             retorno += "Monster itens: \n";
-            for (int i = 0; i < monster.getWeapons().size(); i++){
-                //String descricaoDoItem = monster.getWeapons().get(i).getDescription();
-                String numeroDoItem = "[" + i + "]";
-
-                retorno += numeroDoItem + " " + monster.getWeapons().get(i).showItemRoom();
-            }
+            List<Item> monsterItems = (List<Item>)(List<?>) this.monster.getWeapons();
+            retorno += Item.returnAllItems(monsterItems);
         }
 
 

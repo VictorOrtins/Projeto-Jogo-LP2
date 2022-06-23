@@ -316,9 +316,15 @@ public class Player extends Character {
      */
     private String playerItems(){
         String retorno = "Your items: \n";
+        if (itens != null && itens.size() != 0){
+            retorno += Item.returnAllItems(itens);
+        }
+
+        /* 
         for (int i = 0; i < this.getItens().size(); i++){
             retorno += "[" + i + "] The " + this.getItens().get(i).showItem();
         }
+        */
         retorno += "Current weight: " + currrentWeight() + "kg\n";
         retorno += "Maximum weight: " + maximumWeight + "kg\n";
         retorno += "\n";

@@ -309,7 +309,7 @@ public class Game
 
 
         //this.player.setCurrentRoom(pracaDeAlimentacao);  // iniciar game na praça de alimentação
-        this.player.addItem(new Weapon("Bad knife", "A not so sharp wife", 0.2, 2, 400));
+        this.player.addItem(new Weapon("Bad knife", "A not so sharp knife", 0.2, 2, 400));
         this.player.setCurrentRoom(centauro);
     }
 

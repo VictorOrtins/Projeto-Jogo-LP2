@@ -1,4 +1,5 @@
 package src.itens;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -105,8 +106,19 @@ public class Item {
 
     }
 
+    public static String returnAllItems(List<Item> items){
+        String retorno = "";
 
-    
+        for (Item item : items){
+            String nomeDoItem = "- " + item.getName() + " - ";
+
+            retorno += nomeDoItem + item.showItem();
+        }
+
+        return retorno;
+    }
+
+
 
 
     @Override

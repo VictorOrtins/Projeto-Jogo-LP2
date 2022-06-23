@@ -133,9 +133,11 @@ public class Monster extends Character{
 
         String retorno = "";
 
+        /* 
         if (this.getCurrentRoom() instanceof ExitRoom){
             return retorno;
         }
+        */
 
         if (this.isAlive()){
             retorno += "Look! There's a monster named " + this.getName() + "\n" + characterHealth();
@@ -150,7 +152,6 @@ public class Monster extends Character{
     public List<Weapon> getWeapons(){
         return weapons;
     }
-
 
 
     @Override
