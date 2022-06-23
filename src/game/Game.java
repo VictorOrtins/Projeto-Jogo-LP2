@@ -121,10 +121,10 @@ public class Game
         saida = new ExitRoom("at the exit! You finished the game!");
 
         centauro.setExits("north", hering);
-        centauro.addItem("Vasco Shirt", "ugly as fuck vasco shirt", 0.7);
+        centauro.addItem("Vasco-Shirt", "ugly as fuck vasco shirt", 0.7);
         centauro.addItem(new Weapon("Football", "Old football", 0.3, 5, 15));
-        centauro.addItem(new Food("Protein Bar", "Protein bar, You eat and keep hungry", 0.2, 30, 0));
-        centauro.addItem(new Weapon("Boxing gloves", "A new pair of boxing gloves", 1.4, 25, 6));
+        centauro.addItem(new Food("Protein-Bar", "Protein bar, You eat and keep hungry", 0.2, 30, 0));
+        centauro.addItem(new Weapon("Boxing-gloves", "A new pair of boxing gloves", 1.4, 25, 6));
 
 
         hering.setExits("west", tonsShop);
@@ -135,7 +135,7 @@ public class Game
 
         tonsShop.setExits("east", hering);
         tonsShop.addItem( "Rock","tinniest rock ever", 0.5);
-        tonsShop.addItem(new Weapon("Theo Isaac", "little man Theo Isaac", 5, 12, 2));
+        tonsShop.addItem(new Weapon("Theo-Isaac", "little man Theo Isaac", 5, 12, 2));
 
         spoleto.setExits("west", mcDonalds);
         spoleto.setExits("east", elevadorPrimeiroAndar);
@@ -151,16 +151,16 @@ public class Game
         mcDonalds.addItem(new Food("Sushi", "Tasty Sushi", 0.2, 2, 40));
         mcDonalds.addItem("Table","one heck of a table", 4);
         mcDonalds.addItem(new Weapon("Fork", "useful fork,", 0.8, 30, 10));
-        mcDonalds.addItem(new Food("Magic cookie", "Magic Cookie", 0.7, 200, 3.7));
-        mcDonalds.addItem(new Food("Big Mac", "Best and worst mcdonalds burger, big mac", 0.4, -1.2, 4));
-        mcDonalds.addItem(new Weapon("French Fries", "deadly, deadly french fries,", 1.2, 4, 2));
+        mcDonalds.addItem(new Food("Magic-cookie", "Magic Cookie", 0.7, 200, 3.7));
+        mcDonalds.addItem(new Food("Big-Mac", "Best and worst mcdonalds burger, big mac", 0.4, -1.2, 4));
+        mcDonalds.addItem(new Weapon("French-Fries", "deadly, deadly french fries,", 1.2, 4, 2));
 
         
         cafe.setExits("north", cinema);
         cafe.setExits("south", lojaDoFlamengo);
         cafe.setExits("east", mcDonalds);
         cafe.addItem("Napkins","A huge amount of napkins", 8);
-        cafe.addItem(new Food("Pao de Queijo", "A cheese bread, but it's different", 0.4, 60, 0.2));
+        cafe.addItem(new Food("Pao-de-Queijo", "A cheese bread, but it's different", 0.4, 60, 0.2));
 
         cinema.setExits("south", mcDonalds);
         cinema.addItem(new Food("Popcorn", "Salty popcorn", 0.2, 30, 6));
@@ -175,7 +175,7 @@ public class Game
 
 
         piticas.setExits("north", lojaDoFlamengo);
-        piticas.addItem("Piticas shirt","goofy ass nerd shirt", 0.6);
+        piticas.addItem("Piticas-shirt","goofy ass nerd shirt", 0.6);
         
 
 
@@ -189,18 +189,18 @@ public class Game
         gameStation.setExits("south", banheiro);
         gameStation.addItem("Game tickets", "A ticket that you can trade for an bow and arrow that doesn't last for 5 minutes", 0.5);
         gameStation.addItem(new Weapon("Nerf", "a classy nerf", 1, 10, 5));
-        gameStation.addItem(new Weapon("Bumber car", "a huge bumper car", 4, 1, 100));
+        gameStation.addItem(new Weapon("Bumber-car", "a huge bumper car", 4, 1, 100));
 
         banheiro.setExits("north", gameStation);
         banheiro.setExits("west", pracaDeAlimentacao);
         banheiro.addItem("Turd", "A biiig piece of turd", 4);
-        banheiro.addItem(new Weapon("Toilet Paper", "you can clean and kill people with this toilet paper", 1, 14, 5));
+        banheiro.addItem(new Weapon("Toilet-Paper", "you can clean and kill people with this toilet paper", 1, 14, 5));
         banheiro.addItem(new Food("Apple", "a very clean apple", 3, 100, 2));
 
         leitura.setExits("northwest", pracaDeAlimentacao);
         leitura.setExits("west", escadaRolanteSegundoAndar);
         leitura.setExits("south", oticaWamberto);
-        leitura.addItem("A sutil arte de tacar o foda-se", "An underrated book, the sutil art of tacar o fds", 2);
+        leitura.addItem("A-sutil-arte-de-tacar-o-foda-se", "An underrated book, the sutil art of tacar o fds", 2);
         leitura.addItem(new Food("Gum", "strawberry gum", 0.4, 50, 4));
         
         oticaWamberto.setExits("north", leitura);
@@ -215,8 +215,8 @@ public class Game
         
         lojasAmericanas.setExits("north", escadaRolanteSegundoAndar);
         lojasAmericanas.setExits("east", oticaWamberto);
-        lojasAmericanas.addItem(new Weapon("a bit of everything", "in a very diverse store, you find a very diverse item", 2, 50, 30));
-        lojasAmericanas.addItem(new Food("Chocolate bar", "an oddly good chocolate bar",0.5, 60, 10));
+        lojasAmericanas.addItem(new Weapon("a-bit-of-everything", "in a very diverse store, you find a very diverse item", 2, 50, 30));
+        lojasAmericanas.addItem(new Food("Chocolate-bar", "an oddly good chocolate bar",0.5, 60, 10));
 
         pracaDeAlimentacao.setExits("northeast", gameStation);
         pracaDeAlimentacao.setExits("east", banheiro);
@@ -237,7 +237,7 @@ public class Game
 
         lojaDoBelo.setExits("west", salaDeSeguranca);
         lojaDoBelo.setExits("north", pirlimpimpim);
-        lojaDoBelo.addItem("Belo shirt", "ugly ass belo jersey", 2);
+        lojaDoBelo.addItem("Belo-shirt", "ugly ass belo jersey", 2);
 
         lojaDoBelo.addTeleportLocation(onildo);
         lojaDoBelo.addTeleportLocation(estacionamento);
@@ -263,7 +263,7 @@ public class Game
 
         Monster nebueR; 
         nebueR = new Monster("nebueR", "the Russian guard", salaDeSeguranca, 125);
-        nebueR.addWeapon(new Weapon("Trancamento de Curso", "If you get it, you get it.", 5, 15, 3));
+        nebueR.addWeapon(new Weapon("Trancamento-de-Curso", "If you get it, you get it.", 5, 15, 3));
         salaDeSeguranca.setMonster(nebueR);
 
         Monster wamberto;
@@ -442,7 +442,7 @@ public class Game
                 System.out.println("||| You don't have an item list |||");
             }
             catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("||| You need to choose a food in your item list |||");
+                System.out.println("||| You need to choose a valid item in your item list |||");
             }
             catch(AlreadyExistingItemException e){
                 System.out.println("||| You already have this item |||");
@@ -453,16 +453,13 @@ public class Game
                 sucess = this.player.take(command);
             }
             catch(SecondWordException e){
-                System.out.println("||| Drop what? |||");
+                System.out.println("||| Take what? |||");
             }
             catch(ThirdWordException e){
                 System.out.println("||| What are you trying to say? |||");
             }
-            catch(NumberFormatException e){
-                System.out.println("||| Choose a valid item |||");
-            }
             catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("||| You need to choose a food in your item list |||");
+                System.out.println("||| You need to choose a valid item in your item list |||");
             }
             catch(AlreadyExistingItemException e){
                 System.out.println("||| Maximum Weight Hit|||");
@@ -510,7 +507,7 @@ public class Game
                 System.out.println("||| Choose a valid room|||");
             }
             catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("||| You need to choose a food in the room list |||");
+                System.out.println("||| You need to choose a valid room in the room list |||");
             }
             catch(IllegalArgumentException e){
                 System.out.println("||| You can't teleport outside of a teleport room! |||");

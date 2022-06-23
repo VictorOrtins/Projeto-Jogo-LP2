@@ -392,6 +392,26 @@ public class Player extends Character {
             throw new ThirdWordException("Invalid use of the third word");
         }
 
+        String secondWord = command.getSecondWord().toLowerCase();
+
+        for (Item item : this.getCurrentRoom().getItems()){
+            if (item.getName().toLowerCase().equals(secondWord)){
+                boolean verificador;
+                verificador = this.addItem(item);
+
+                if (verificador){
+                    this.getCurrentRoom().getItems().remove(item);
+                    return true;
+                }
+
+                throw new AlreadyExistingItemException("Maximum Weight Hit");
+                
+            }
+        }
+
+        throw new ArrayIndexOutOfBoundsException("Choose a item that's in the array");
+
+        /* 
         int itemNumber;
 
         try{
@@ -417,6 +437,7 @@ public class Player extends Character {
         else{
             throw new ArrayIndexOutOfBoundsException("Choose a item that's in the array");
         }
+        */
     }
 
     /**

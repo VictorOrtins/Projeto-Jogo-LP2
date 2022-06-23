@@ -177,28 +177,8 @@ public class Room
         if (items != null){
             if (items.size() != 0){
                 retorno += "Room items: ";
-                /* 
-                retorno += "Look! there's a ";
-                for (int i = 0; i < items.size(); i++){
-                    if (i != 0 && i != items.size() - 1){ //Se não for o primeiro e não for o último da lista
-                        retorno += ", ";
-                    }
-                    else if (items.size() != 1 && i == items.size() - 1){ //Se não for o único e for o último
-                        retorno +=  " and a ";
-                    }
-                    retorno += items.get(i).getName();
-                }
-                */
                 retorno += "\n";
                 retorno += Item.returnAllItems(items);
-                /* 
-                for (int i = 0; i < items.size(); i++){
-                    //String descricaoDoItem = items.get(i).getDescription();
-                    String nomeDoItem = "- ";
-    
-                    retorno += nomeDoItem + items.get(i).showItemRoom();
-                }
-                */
                 retorno += "\n";
             }
         }
@@ -209,15 +189,6 @@ public class Room
             List<Item> monsterItems = (List<Item>)(List<?>) this.monster.getWeapons();
             retorno += Item.returnAllItems(monsterItems);
         }
-
-
-        /*
-            Acabou ficando complexo e decidi comentar
-
-            Basicamente os dois fors foram as duas formas que achei de retornar a string certa.
-            Os ifs no primeiro for são para verificar se é o primeiro item listado, se é o único, a fim
-            de retornar a string da forma correta.
-        */
 
         retorno += getExitString();
 

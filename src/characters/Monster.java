@@ -6,7 +6,6 @@ import java.util.Random;
 
 import src.game.Command;
 import src.itens.Weapon;
-import src.rooms.ExitRoom;
 import src.rooms.Room;
 
 /**
